@@ -1,11 +1,11 @@
-/* Import Gilroy-Bold */
+
 @font-face {
     font-family: 'GilroyBold';
     src: url('../fonts/gilroy-bold/Gilroy-Bold.ttf') format('truetype');
     
   }
   
-  /* Import Gilroy-Heavy */
+  
   @font-face {
     font-family: 'GilroyHeavy';
     src: url('../fonts/gilroy-bold/Gilroy-Heavy.ttf') format('truetype');
@@ -136,14 +136,14 @@
   }
 
   .featured-by img {
-    max-width: 100%; /* Ensures all images are responsive */
-    height: auto;    /* Maintains aspect ratio */
-    width: 10%;      /* Default size for all icons */
+    max-width: 100%; 
+    height: auto;    
+    width: 10%;      
 }
 
 .featured-by img.cnbc {
-    width: 5%; /* Adjust the width percentage for CNBC specifically */
-    height: auto; /* Maintains aspect ratio */
+    width: 5%; 
+    height: auto; 
 }
 
   .container{
@@ -159,10 +159,10 @@
         align-items: center;
         border: 1.06px solid transparent;
         border-image: conic-gradient(
-            from 135deg, /* Start the gradient at 135 degrees */
-            #FFFFFF80,   /* Bright top-left */
-            #00000000 50%, /* Dark center */
-            #FFFFFF80 75%, /* Bright bottom-right */
+            from 135deg, 
+            #FFFFFF80,   
+            #00000000 50%,
+            #FFFFFF80 75%, 
             #00000000
         ) 1;
         border-radius: 10px;    
@@ -194,14 +194,11 @@
     }
 
     .container-reviews {
-        padding: 4vh 0;
         display: flex;
-        justify-content: center; 
-        gap: 2rem; 
-        flex-wrap: wrap; 
-        font-size: 1rem;
-        font-weight: 500;
-        margin: 0 auto; 
+        overflow: hidden; 
+        flex-wrap: nowrap;
+        gap: 1rem; 
+        scroll-snap-type: x mandatory; 
     }
 
     .container-steps{
@@ -562,6 +559,7 @@
     }
 
     @media (min-width: 1160px) {
+
         .container-left-img {
             display: flex;
             margin: 0 200px;
@@ -569,23 +567,39 @@
             padding: 5vh 0 0 0;
             justify-content: flex-start;
             flex-direction: row;
-            /* flex-direction: row-reverse; */
             gap: 2rem;
             position: relative;
-            /* justify-content: center; */
-            
+            border-top: 2px solid; 
+            border-image: linear-gradient(to right, #F6FEF7 0%, #BAE8CB 100%);
+            border-image-slice: 1; 
         }
-        .container-left-img::before {
+        
+        .container-left-img::before,
+        .container-left-img::after {
             content: "";
             position: absolute;
-            
+            width: 2px;
+            height: 0; 
+            background: linear-gradient(to bottom, #F6FEF7 0%, #BAE8CB 100%);
+            border-radius: 2px;
+            transition: height 0.3s ease; 
+        }
+        
+        .container-left-img::before {
             top: 0;
             left: 0;
-            width: 100%;
-            height: 2px; 
-            background: linear-gradient(to right, #F6FEF7 0%, #BAE8CB 100%);
-            border-radius: 2px; 
         }
+        
+        .container-left-img::after {
+            top: 0;
+            right: 0;
+        }
+        
+        .container-left-img:hover::before,
+        .container-left-img:hover::after {
+            height: 100%; 
+        }
+        
 
         .container-right-img {
             display: flex;
@@ -596,21 +610,37 @@
             flex-direction: row-reverse;
             gap: 2rem;
             position: relative;
-            /* justify-content: center; */
-            
+            border-top: 2px solid; 
+            border-image: linear-gradient(to right, #F6FEF7 0%, #BAE8CB 100%);
+            border-image-slice: 1; 
         }
-    
-        .container-right-img::before {
+        
+        .container-right-img::before,
+        .container-right-img::after {
             content: "";
             position: absolute;
-            
+            width: 2px;
+            height: 0; 
+            background: linear-gradient(to bottom, #F6FEF7 0%, #BAE8CB 100%);
+            border-radius: 2px;
+            transition: height 0.3s ease; 
+        }
+        
+        .container-right-img::before {
             top: 0;
             left: 0;
-            width: 100%;
-            height: 2px; 
-            background: linear-gradient(to left, #F6FEF7 0%, #BAE8CB 100%);
-            border-radius: 2px; 
         }
+        
+        .container-right-img::after {
+            top: 0;
+            right: 0;
+        }
+        
+        .container-right-img:hover::before,
+        .container-right-img:hover::after {
+            height: 100%; 
+        }
+        
     }
 
 
@@ -668,7 +698,16 @@
 
         
         
-        
+        .container-reviews {
+            padding: 4vh 0;
+            display: flex;
+            justify-content: center; 
+            gap: 2rem; 
+            flex-wrap: wrap; 
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0 auto; 
+        }
 
         .container-features {
             padding: 7vh 0;
@@ -705,6 +744,9 @@
         .container-crush-debt img {
             width: 50%;
         }
+
+        
+
         .step-image {
         
             height: 55vh;
@@ -738,10 +780,19 @@
         }
 
         .feature-item {
-            padding: 0 3rem;
-            
             display: flex;
             align-items: center;
+            gap: 1rem;
+            /* background-color: #f4f5f8; */
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px) scale(1.05); 
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
         }
 
         .feature-icon {
