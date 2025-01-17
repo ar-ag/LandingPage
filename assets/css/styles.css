@@ -1,0 +1,208 @@
+/* Import Gilroy-Bold */
+@font-face {
+    font-family: 'GilroyBold';
+    src: url('../fonts/gilroy-bold/Gilroy-Bold.ttf') format('truetype');
+    
+  }
+  
+  /* Import Gilroy-Heavy */
+  @font-face {
+    font-family: 'GilroyHeavy';
+    src: url('../fonts/gilroy-bold/Gilroy-Heavy.ttf') format('truetype');
+    
+  }
+
+  @font-face {
+    font-family: 'GilroyLight';
+    src: url('../fonts/gilroy-bold/Gilroy-Light.ttf') format('truetype');
+    
+  }
+
+  @font-face {
+    font-family: 'GilroyMedium';
+    src: url('../fonts/gilroy-bold/Gilroy-Medium.ttf') format('truetype');
+    
+  }
+
+  @font-face {
+    font-family: 'GilroyRegular';
+    src: url('../fonts/gilroy-bold/Gilroy-Regular.ttf') format('truetype');
+    
+  }
+
+  :root {
+    --normal-font: 400;
+    --subheader-font: 600;
+    --header-font: 3rem;
+    --primary-color: #17C95F;
+    --secondary-text-color: #787F88;
+    --line-height: 1.7rem;
+    --transition: 0.4s ease-in;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--transition);
+  }
+
+  body {
+    font-family: 'GilroyRegular', sans-serif;
+    line-height: var(--line-height);
+  }
+
+    h1,
+    h2,
+    h3{
+        margin-top: 0;
+    }
+
+
+  .hero {
+    padding: 1rem 0;
+    
+    text-align: center;
+    
+    width: 100vw;
+    background: linear-gradient(to top left, #FEEFC7,#E3F1E7);
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+    
+  }
+
+  .container{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+    
+    }
+
+    .container-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1.06px solid transparent;
+        border-image: conic-gradient(
+            from 135deg, /* Start the gradient at 135 degrees */
+            #FFFFFF80,   /* Bright top-left */
+            #00000000 50%, /* Dark center */
+            #FFFFFF80 75%, /* Bright bottom-right */
+            #00000000
+        ) 1;
+        border-radius: 10px;    
+        
+    }
+
+    .container-flex{
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:3vh 0;
+
+    }
+
+    .container-features {
+        padding: 8vh 0;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 500;
+        
+    }
+
+    .feature-item {
+        padding: 0 3rem;
+        
+        /* display: flex; */
+    }
+
+    .feature-icon {
+        vertical-align: middle;
+    }
+    
+    .feature-text {
+        padding-left: 1rem;
+        vertical-align: middle;
+        
+    }
+
+    .container-image {
+        width: 75%;
+        margin-top: 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .temp{
+        padding: 0 2rem;
+    }
+
+    .bold-text {
+        font-family: 'GilroyBold', sans-serif;
+        font-size: 5rem;
+        line-height: 10rem;
+    }
+
+    .light-text {
+        font-family: 'GilroyLight', sans-serif;
+        font-size: 5rem;
+        /* letter-spacing: 0.2rem; */
+    }
+
+    .logos img{
+        width: 4vw;
+    
+      }
+
+
+    nav{
+        font-family: 'GilroyLight', sans-serif;
+        font-size:0.45rem;
+        color: var(--secondary-text-color);
+    
+    }
+    nav ul{
+        list-style: none;
+        
+        display:flex;
+        /* flex-direction: column; */
+        /* justify-content: space-between ; */
+        padding:0;
+        justify-content: center;
+    
+    }
+
+    nav p {
+        padding-right: 1rem;
+        
+    }
+    nav li{
+        
+            /* margin-top: 1em; */
+            display: flex;
+            align-items: center;
+    
+        /* margin:0 1em; */
+    }
+    nav a{
+        color: #707070;
+        text-decoration: none;
+        font-weight:700;
+        /* padding:0.25rem; */
+    
+    }
+
+    nav img {
+        /* background-color: #0e0e0e; */
+        padding: 5px;
+        border-radius: 5px;
+        width: 2.75vw;
+    }
