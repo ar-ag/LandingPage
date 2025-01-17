@@ -31,8 +31,8 @@
   }
 
   :root {
-    --normal-font: 400;
-    --subheader-font: 600;
+    --normal-font: 1.5rem;
+    --subheader-font: 2rem;
     --header-font: 3rem;
     --primary-color: #17C95F;
     --secondary-text-color: #787F88;
@@ -56,11 +56,23 @@
     line-height: var(--line-height);
   }
 
+  footer {
+    padding: 1rem 0;
+    margin: 10vh 0;
+    text-align: justify;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    width: 100vw;
+  }
+
     h1,
     h2,
     h3{
         margin-top: 0;
     }
+
+
+
 
 
   .hero {
@@ -70,10 +82,66 @@
     
     width: 100vw;
     background: linear-gradient(to top left, #FEEFC7,#E3F1E7);
-    background-size: 100% 80%;
+    background-size: 100% 85%;
     background-repeat: no-repeat;
     
   }
+
+  .why {
+    text-align: center;
+    padding: 1rem 0rem;
+    justify-items: center;
+  }
+
+  .featured-by {
+    font-family: 'GilroyBold', sans-serif;
+    background: #F4F5F8;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    padding:  4vh 200px ;
+    color: #959AA5;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .steps {
+    background-color: #F6FEF7;
+    padding: 1rem 0;
+    
+    text-align: center;
+    
+    width: 100vw;
+  }
+
+  .user-reviews {
+    /* background-color: #F6FEF7; */
+    padding: 1rem 0;
+    margin: 2vh 0;
+    text-align: center;
+    
+    width: 100vw;
+  }
+
+  .crush-debt {
+    background: linear-gradient(to right, #E5F1E3 0%, #BAE8CB 100%);
+    /* padding: 1rem 0; */
+    margin: 2vh 0;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .featured-by img {
+    max-width: 100%; /* Ensures all images are responsive */
+    height: auto;    /* Maintains aspect ratio */
+    width: 10%;      /* Default size for all icons */
+}
+
+.featured-by img.cnbc {
+    width: 5%; /* Adjust the width percentage for CNBC specifically */
+    height: auto; /* Maintains aspect ratio */
+}
 
   .container{
     width:90%;
@@ -104,41 +172,154 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding:3vh 0;
+        padding:5vh 0;
 
     }
 
     .container-features {
-        padding: 8vh 0;
+        padding: 7vh 0;
         display: flex;
         margin: 0 auto;
         justify-content: center;
         font-size: 1rem;
         font-weight: 500;
+    }
+
+    .container-reviews::-webkit-scrollbar {
+        display: none;
+    }
+
+    .container-reviews {
+        padding: 4vh 0;
+        display: flex;
+        justify-content: center; 
+        gap: 2rem; 
+        flex-wrap: wrap; 
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0 auto; 
+    }
+
+    .container-steps{
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        
+        justify-content: center;
+        padding:10vh 0 0 0;
+
+    }
+
+
+    .container-left-img {
+        display: flex;
+        margin: 0 200px;
+        margin-top: 3vh;
+        padding: 5vh 0 0 0;
+        justify-content: flex-start;
+        /* flex-direction: row-reverse; */
+        gap: 2rem;
+        position: relative;
+        /* justify-content: center; */
         
     }
+
+    .container-left-img::before {
+        content: "";
+        position: absolute;
+        
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px; 
+        background: linear-gradient(to right, #F6FEF7 0%, #BAE8CB 100%);
+        border-radius: 2px; 
+    }
+
+    .container-right-img {
+        display: flex;
+        margin: 0 200px;
+        margin-top: 3vh;
+        padding: 5vh 0 0 0;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        gap: 2rem;
+        position: relative;
+        /* justify-content: center; */
+        
+    }
+
+    .container-right-img::before {
+        content: "";
+        position: absolute;
+        
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px; 
+        background: linear-gradient(to left, #F6FEF7 0%, #BAE8CB 100%);
+        border-radius: 2px; 
+    }
+
+    .container-crush-debt {
+        flex-basis: 50%;
+        height: 50vh;
+        display: flex;
+        justify-content: space-between;
+        padding: auto auto;
+        /* flex-direction: column; */
+    }
+    
 
     .feature-item {
         padding: 0 3rem;
         
-        /* display: flex; */
+        display: flex;
     }
 
     .feature-icon {
         vertical-align: middle;
+        height: 2.5rem;
     }
     
     .feature-text {
         padding-left: 1rem;
         vertical-align: middle;
-        
+        text-align: left;
     }
 
     .container-image {
         width: 75%;
-        margin-top: 30px;
+        margin-top: 2rem;
         position: relative;
         z-index: 1;
+    }
+
+    
+    .download-bright {
+        position: absolute;
+        display: block;
+        width: 250px;
+        top:150px;
+        right: -135px;
+        z-index: 100;
+    }
+
+    .review-card {
+        flex: 1 1 calc(20% - 2rem); 
+        max-width: 15rem; 
+        min-width: 12rem; 
+        background: #F4F5F8;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        scroll-snap-align: start;
+        text-align: left;
+    }
+
+    
+    .container img {
+        max-width: 100%;
     }
 
     .temp{
@@ -148,13 +329,30 @@
     .bold-text {
         font-family: 'GilroyBold', sans-serif;
         font-size: 5rem;
-        line-height: 10rem;
+        line-height: 5.5rem;
     }
 
     .light-text {
         font-family: 'GilroyLight', sans-serif;
         font-size: 5rem;
-        /* letter-spacing: 0.2rem; */
+        line-height: 5rem;
+    }
+
+    .header-text {
+        font-family: 'GilroyBold', sans-serif;
+        font-size: var(--header-font);
+        padding-bottom: 3rem;
+    }
+
+    .header-lightText {
+        font-family: 'GilroyRegular', sans-serif;
+        font-weight: lighter;
+    }
+
+    .header-smallText {
+        font-family: 'GilroyRegular', sans-serif;
+        font-weight: lighter;
+        font-size: 1rem;
     }
 
     .logos img{
@@ -162,6 +360,103 @@
     
       }
 
+    .line-why {
+        margin: 0 auto;
+        width: 90%;
+        
+    }
+
+    .step-image {
+        
+        height: 55vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .step-content {
+        padding: 6vh 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items: flex-start; */
+        gap: 1rem;
+        text-align: left;
+    }
+
+    .step-content h3 {
+        color: var(--primary-color);
+    }
+
+    .step-content h4 {
+        font-family: 'GilroyMedium', sans-serif;
+        font-size: var(--subheader-font);
+        line-height: 3rem;
+    }
+
+    .step-content p {
+        font-size: var(--normal-font);
+        color: #787F88;
+        padding-right: 4rem;
+        line-height: 2rem;
+    }
+
+    .step-content a {
+        padding-top: 3vh;
+        color: #0e0e0e;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'GilroyBold', sans-serif;
+        transition: color 0.3s ease;
+        font: 1rem;
+    }
+
+    .step-content span {
+        padding-left: 1rem;
+        color: var(--primary-color);
+    }
+
+    .review-card p {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        margin: 0.8rem 0;
+    }
+
+    .review-card h4 {
+        font-size: 0.8rem;
+    }
+
+    .stars {
+        background: linear-gradient(to right, #17C95F 0%, #138241 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.5rem;
+    }
+
+    .faq-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1.5px solid #ccc;
+        padding: 2.5rem 0;
+        font-family: 'GilroyMedium', sans-serif;
+        font-size: 1.4rem;
+    }
+
+    .container-steps h1 {
+        line-height: 3rem;
+    }
+
+    .container-crush-debt h1 {
+        margin: auto 5rem;
+        text-align: left;
+        line-height: 4rem;
+    }
+
+    .container-crush-debt img {
+        width: 50%;
+    }
 
     nav{
         font-family: 'GilroyLight', sans-serif;
@@ -205,4 +500,13 @@
         padding: 5px;
         border-radius: 5px;
         width: 2.75vw;
+    }
+
+    footer span {
+        text-decoration: underline;
+    }
+
+    footer ol {
+        padding: 2rem;
+        color: var(--secondary-text-color);
     }
