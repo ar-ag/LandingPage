@@ -138,11 +138,15 @@
   .featured-by img {
     max-width: 100%; 
     height: auto;    
-    width: 10%;      
+    width: 100%;      
 }
+    .featured-by a {
+        width: 10%;
+        margin: 0 0;
+    }
 
 .featured-by img.cnbc {
-    width: 5%; 
+    width: 50%; 
     height: auto; 
 }
 
@@ -371,6 +375,7 @@
         font-family: 'GilroyLight', sans-serif;
         font-size: 2rem;
         line-height: 2rem;
+        font-weight: 100;
     }
 
     .header-text {
@@ -484,14 +489,14 @@
         text-align: left;
     }
 
-    .container-steps h1 {
+    .container-steps h2 {
         line-height: 3rem;
     }
 
-    .container-crush-debt h1 {
+    .container-crush-debt h2 {
         margin: 1rem auto;
         text-align: left;
-        /* line-height: 4rem; */
+        line-height: 3rem;
     }
 
     .container-crush-debt p {

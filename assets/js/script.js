@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         slideshowContainer.addEventListener("mouseleave", () => {
-            setInterval(moveToNextSlide, 3000); 
+            setInterval(moveToNextSlide, 1000); 
         });
     }
 });
